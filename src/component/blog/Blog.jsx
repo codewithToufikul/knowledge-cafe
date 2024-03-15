@@ -1,6 +1,6 @@
 import Frame from '../../../images/frame.png'
 
-const blog = ({blog, handleAddToBookmark}) => {
+const blog = ({blog, handleAddToBookmark, handleMarkAsRead}) => {
     const {title, cover, author_img, author, posted_date, reading_time, hashtags} = blog
     return (
         <div className='space-y-1 py-4'>
@@ -26,7 +26,7 @@ const blog = ({blog, handleAddToBookmark}) => {
                 }
                 
             </div>
-            <a className='text-lg font-medium text-blue-600' href="">Mark As Read</a>
+            <button onClick={()=>handleMarkAsRead(reading_time)} className='text-lg font-medium underline text-blue-600' >Mark As Read</button>
             </div>
         </div>
     );
